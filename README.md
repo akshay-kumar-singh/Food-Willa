@@ -1,6 +1,12 @@
 # Restaurant Food Application
 
-This project is a **React-based Restaurant Finder** app that connects to Swiggy’s real API to fetch live restaurant data. It offers a seamless user experience for exploring restaurants, viewing details like ratings, delivery times, and cuisines, and conducting refined searches.
+> **Note**: This project uses Swiggy's real API to fetch live restaurant data. As Swiggy does not officially support open API access, you might encounter **CORS issues** or **blocked requests**. To resolve these:
+
+1. **Enable CORS**: Use the [CORS Proxy](https://corsproxy.io) with Swiggy API URLs (as done in this project).
+2. **Use a VPN**: Depending on your location, Swiggy may restrict access, so a VPN might be required.
+3. **API Structure**: Swiggy's API structure may change without notice, potentially affecting data fetching. Please verify the API structure or adjust paths as needed.
+
+---
 
 ## Table of Contents
 
@@ -74,22 +80,17 @@ The application is structured as follows:
 
 ---
 
-
-# Types of Testing
-
-1. Unit Testing
-2. Integration Testing
-3. End to End Testing (ee2 testing)
-
-# Setup Testing in our Application
+## Setup Testing in our Application
 
 1. Install React Testing Library (RTL)
 2. Install Jest
 3. Install Babel Dependencies
-4. Configure babel by creating a babel.config.js file
-5. Confgure Parcel config by creating a .parcelrc file to disable default Babel Transpilation
-6. Jest command => npx jest --init
-7. Install jsdom library
-8. Install @babel/preset-react to make jsx work in the test cases
-9. Include @babel/preset-react inside Babel
-10. Install @testing-library/jest-dom
+4. Configure babel by creating a `babel.config.js` file
+5. Configure Parcel by creating a `.parcelrc` file to disable default Babel Transpilation
+6. Initialize Jest with `npx jest --init`
+7. Install `jsdom` library
+8. Install `@babel/preset-react` to support JSX in tests
+9. Add `@babel/preset-react` inside Babel configuration
+10. Install `@testing-library/jest-dom` for extended DOM matchers
+
+---
